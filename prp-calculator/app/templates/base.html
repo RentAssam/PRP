@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRP Calculator - OIL India</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- Include Alpine.js for interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" 
+                 alt="Company Logo" 
+                 class="h-12">
+            <div class="space-x-4">
+                <a href="#" class="hover:text-blue-200">History</a>
+                <a href="#" class="hover:text-blue-200">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-8 py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 PRP Calculator. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">
+                Disclaimer: Calculations are estimates only
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

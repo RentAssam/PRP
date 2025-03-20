@@ -1,0 +1,89 @@
+/* PDF Report Styling */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  border-bottom: 3px solid #2a5c82;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #1d4560;
+  font-size: 24pt;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  color: #2a5c82;
+  font-size: 18pt;
+  margin: 1.5rem 0 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+}
+
+td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+td:first-child {
+  font-weight: 500;
+  width: 40%;
+}
+
+.signature-box {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 2px solid #1d4560;
+}
+
+.signature-box p {
+  margin: 0.5rem 0;
+}
+
+/* Print-specific Styles */
+@media print {
+  .header {
+    margin-top: 0;
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  table {
+    page-break-inside: avoid;
+  }
+  
+  .signature-box {
+    position: fixed;
+    bottom: 20px;
+  }
+}
+
+.financial-highlight {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.projection-note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5rem;
+}
